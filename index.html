@@ -4,106 +4,212 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mastewal Alebel Portfolio</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
-    <header>
-      <nav>
+    <!-- Mobile Hamburger Menu -->
+    <div class="mobile-nav-toggle">
+      <i class="fa-solid fa-bars" id="menu-btn"></i>
+    </div>
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <img src="maste.jpg" alt="Mastewal Alebel" class="sidebar-profile-img" />
         <h2 class="logo">
-          <img src="maste.jpg" alt="logo" class="logo-img" /> Mastewal
+          Mastewal
         </h2>
+      </div>
+      <nav class="nav-menu">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact Me</a></li>
+          <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> <span>About Me</span></a></li>
+          <li><a href="#skills" class="nav-link"><i class="fa-solid fa-laptop-code"></i> <span>Skills</span></a></li>
+          <li><a href="#projects" class="nav-link"><i class="fa-solid fa-briefcase"></i> <span>Projects</span></a></li>
+          <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav>
-    </header>
+    </aside>
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-text">
-        <h1>Hello, I'm <span>Mastewal Alebel</span></h1>
-        <p>3rd Year IT Student | Web Developer | Seeking Internship</p>
-        <a href="maste_cv.pdf" target="_blank" class="cv-button">Download CV</a>
-        <a href="https://github.com/Maste1212" target="_blank" class="cv-button">GitHub</a>
-      </div>
-      <img src="maste.jpg" alt="Mastewal Alebel" class="profile-img" />
-    </section>
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Hello, I'm <span class="highlight">Mastewal Alebel</span></h1>
+            <h2 class="role">Front-End Developer | IT Student</h2>
+            <p id="typing-text" class="tagline"></p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="cv.pdf" target="_blank" class="btn btn-secondary"><i class="fa-solid fa-download"></i> Download CV (PDF)</a>
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <!-- Image moved to sidebar header -->
+          </div>
+        </div>
+      </section>
 
-    <section id="about">
-      <div class="about-container">
-        <h2 class="about-title">About Me</h2>
-        <p class="about-text">I am a <span>3rd-year IT student</span> at Bahir Dar University.</p>
-        <p class="about-text">Passionate about <span>website development</span> and building modern applications.</p>
-        <p class="about-text">I am a passionate and dedicated IT student seeking an internship opportunity.</p>
-        <p class="about-text">to apply my skills in front-end development, mobile app development,</p>
-        <p class="about-text">and software programming, while gaining practical experience</p>
-        <p class="about-text">and contributing to innovative project.</p>
-      </div>
-    </section>
+      <!-- ABOUT ME -->
+      <section id="about" class="about reveal">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <div class="line"></div>
+        </div>
+        <div class="about-container">
+          <p class="about-text">
+            I am a 3rd-year IT student at Bahir Dar University with a strong interest in web development and software engineering. I specialize in building responsive and user-friendly websites using modern technologies. I am passionate about learning new skills and solving real-world problems through technology.
+          </p>
+        </div>
+      </section>
 
-    <section id="skills">
-      <h2 class="section-title">My Skills</h2>
-      <div class="skills-container">
-        <div class="skill-box">
-          <h3>Frontend Development</h3>
-          <ul>
-            <li>HTML5 & CSS3</li>
-            <li>JavaScript</li>
-            <li>React</li>
-          </ul>
+      <!-- SKILLS -->
+      <section id="skills" class="skills reveal">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <div class="line"></div>
         </div>
-        <div class="skill-box">
-          <h3>Other Skills</h3>
-          <ul>
-            <li>Communication</li>
-            <li>Leadership</li>
-            <li>Problem Solving</li>
-          </ul>
+        <div class="skills-container">
+          <div class="skill-card">
+            <i class="fa-brands fa-html5 skill-icon"></i>
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript</p>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-java skill-icon"></i>
+            <h3>Programming</h3>
+            <p>Java, C#</p>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-toolbox skill-icon"></i>
+            <h3>Tools</h3>
+            <p>Git, GitHub, VS Code</p>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-users skill-icon"></i>
+            <h3>Soft Skills</h3>
+            <p>Communication, Leadership, Teamwork</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects">
-      <h2 class="section-title">My Projects</h2>
-      <div class="projects-container">
-        <div class="project-box">
-          <h3>Snake Game</h3>
-          <p>A simple snake game built using JavaScript where the player controls the snake to eat food and grow.</p>
-          <a href="https://github.com/Maste1212/snake-game" target="_blank" class="project-btn">View Project</a>
+      <!-- PROJECTS -->
+      <section id="projects" class="projects reveal">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <div class="line"></div>
         </div>
-        <div class="project-box">
-          <h3>Contact Management System</h3>
-          <p>A system to add, edit, and delete contacts using Java.</p>
-          <a href="https://github.com/Maste1212/contact-management-system" target="_blank" class="project-btn">View Project</a>
-        </div>
-        <div class="project-box">
-          <h3>Portfolio Website</h3>
-          <p>My personal portfolio website built using HTML, CSS, and JavaScript.</p>
-          <a href="https://github.com/Maste1212/portfolio-website" target="_blank" class="project-btn">View Project</a>
-        </div>
-      </div>
-    </section>
+        <div class="projects-container">
+          <div class="project-card">
+            <div class="project-content">
+              <h3>Snake Game</h3>
+              <p>A simple interactive game built using JavaScript. Features keyboard controls and score tracking.</p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="https://github.com/Maste1212/snake-game" target="_blank" class="btn btn-outline">View Project</a>
+            </div>
+          </div>
+          
+          <!-- Placeholder for balanced design -->
+          <div class="project-card">
+            <div class="project-content">
+              <h3>Contact Management</h3>
+              <p>A system to add, edit, and delete contacts efficiently.</p>
+              <div class="tech-stack">
+                <span>Java</span>
+                <span>OOP</span>
+              </div>
+              <a href="https://github.com/Maste1212/contact-management-system" target="_blank" class="btn btn-outline">View Project</a>
+            </div>
+          </div>
 
-    <section id="contact">
-      <h2 class="section-title">Contact Me</h2>
-      <div class="contact-container">
-        <div class="contact-info">
-          <p><strong>Phone:</strong> 0950370926</p>
-          <p><strong>Email:</strong> mastewalalebel0@gmail.com</p>
-          <p><strong>Location:</strong> Bahir Dar, Ethiopia</p>
+          <div class="project-card">
+            <div class="project-content">
+              <h3>Portfolio Website</h3>
+              <p>A responsive, modern personal portfolio website to showcase my skills and projects.</p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="https://github.com/Maste1212/portfolio-website" target="_blank" class="btn btn-outline">View Project</a>
+            </div>
+          </div>
         </div>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact reveal">
+        <div class="section-header">
+          <h2>Contact Me</h2>
+          <div class="line"></div>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>mastewalalebel0@gmail.com</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>0950370926</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-brands fa-github"></i>
+              <div>
+                <h4>GitHub</h4>
+                <p><a href="https://github.com/Maste1212" target="_blank">github.com/Maste1212</a></p>
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="contact-form-container">
+            <form id="contact-form" action="https://github.com/Maste1212" target="_blank">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name"  required pattern="^[A-Za-z\s]{3,}$" title="Name must be at least 3 characters and contain only letters." />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" " required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address." />
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" placeholder="Write your message here..." rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-text">
+            <p>&copy; 2026 Mastewal Alebel. All rights reserved.</p>
+            <p>Built with clean and responsive web experiences.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
