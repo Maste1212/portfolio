@@ -56,8 +56,19 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    alert("Thank you! Redirecting to my GitHub profile...");
-    window.open(this.action, '_blank');
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    const issueTitle = `Contact Form Message from ${name}`;
+    const issueBody = `**Name:** ${name}\n**Email:** ${email}\n\n**Message:**\n${message}`;
+    
+    // Redirect to GitHub new issue page with pre-filled title and body
+    const githubIssueUrl = `https://github.com/Maste1212/portfolio-website/issues/new?title=${encodeURIComponent(issueTitle)}&body=${encodeURIComponent(issueBody)}`;
+    
+    alert("Redirecting to GitHub to send your message as an issue...");
+    window.open(githubIssueUrl, '_blank');
     this.reset();
   });
 }

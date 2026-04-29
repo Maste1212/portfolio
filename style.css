@@ -517,7 +517,7 @@ footer {
 
 .footer-text {
   text-align: center; /* Center the text */
-  color: var(--text-secondary);
+  color: var(--primary-color);
 }
 
 .footer-text p {
